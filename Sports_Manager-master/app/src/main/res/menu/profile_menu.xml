@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.cs442.shash5259.sportsmgr.Login">
+
+    <item android:id="@+id/edit1profile"
+        android:title="@string/Edit1Profile"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/settings_xxl"
+        android:orderInCategory="1"
+        android:menuCategory="secondary"/>
+
+    <item android:id="@+id/save1profile"
+        android:title="@string/Save1profile"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/home_latest"
+        android:orderInCategory="2"
+        android:menuCategory="secondary"/>
+
+    <item android:id="@+id/campusprofile"
+        android:title="@string/CampusProfile"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/location_white"
+        android:orderInCategory="1"
+        android:menuCategory="secondary"/>
+
+</menu>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/iit"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Illinois Institute of technology"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/bog"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:text="The Bog @ IIT"
+        android:layout_marginLeft="5dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/bog_add"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textStyle="italic"
+        android:text="3421 South Federal Street, Chicago, Illinois"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bog_button"
+        android:text="DIRECTIONS"
+       />
+
+        <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:src="@drawable/dotted" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/keating"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:text="Keating Hall"
+        android:layout_marginLeft="5dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/keating_add"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textStyle="italic"
+        android:text="3040 South Wabash Avenue, Chicago, Illinois 60616"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/keating_button"
+        android:text="DIRECTIONS"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:src="@drawable/dotted" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/stuart"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:text="Stuart Field"
+        android:layout_marginLeft="5dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/stuart_add"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textStyle="italic"
+        android:text="3300 South Federal Street, Chicago, Illinois 60616"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stuart_button"
+        android:text="DIRECTIONS"/>
+
+</LinearLayout>

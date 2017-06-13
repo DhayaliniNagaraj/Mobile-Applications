@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SportsMgr</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Action Search</string>
+    <string name="add_team">Add Team</string>
+    <string name="sport_settings">Home</string>
+    <string name="SaveProfile">Home</string>
+    <string name="CampusProfile">Home</string>
+    <string name="EditProfile">Edit</string>
+    <string name="Edit1Profile">Edit1</string>
+    <string name="Save1profile">Save1</string>
+    <string name="title_activity_login_1">Login_1</string>
+    <string name="title_activity_login1">Login1</string>
+    <string name="title_activity_signup">Signup</string>
+    <string name="title_activity_test">test</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="facebook_app_id">769606353140330</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string-array name="gender_values">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>
