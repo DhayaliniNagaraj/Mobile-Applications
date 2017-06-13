@@ -1,0 +1,139 @@
+// Start the Activity LifeCycle Application
+
+02-06 20:39:47.896 D/dnagaraj(23490): 1 - ActivityA: OnCreate() //  Activity A is declared as Main Activity. So when the application is started Activity A onCreate() is called and activity is created first. Activity A State: Created .
+
+02-06 20:39:47.897 D/dnagaraj(23490): 2 - ActivityA: OnStart() // Once onCreate() is finished, onStart() is called. Activity A State: Started
+.
+02-06 20:39:47.898 D/dnagaraj(23490): 3 - ActivityA: OnResume() // Once onStart() is finished,onResume() is called. In this state, the activity is in the foreground and the user can interact with it. Activity A State: Resumed
+
+// Click Start B button 
+
+02-06 20:39:50.582 D/dnagaraj(23490): 4 - ActivityA: OnPause() // Start B button is clicked and onPause() is called which cause  Activity A to go to pause.The Activity A is partially obscured by another activity B. Activity A State: Paused
+
+02-06 20:39:50.609 D/dnagaraj(23490): 1 - ActivityB: OnCreate() // Onclick of Start B Button cause Activity A to pause and onCreate() is called which creates Activity B. Activity B State: Created
+
+02-06 20:39:50.609 D/dnagaraj(23490): 2 - ActivityB: OnStart() // As soon as Activity B is created, it calls onStart() and goes to started state. Activity B State: Started.
+
+02-06 20:39:50.610 D/dnagaraj(23490): 3 - ActivityB: OnResume() // onStart() is quickly followed by onResume() and Activity B goes to Resumed state.In this state,the user can interact with it. Activity B State: Resumed.
+
+02-06 20:39:51.178 D/dnagaraj(23490): 5 - ActivityA: OnStop() // onStop() is called. Activity B is in the foreground , Activity A is stopped. Activity A is completely hidden and not visible to the user.The activity instance and all its state information such as member variable is retained, but code cannot be executed. Activity A State: Stopped.
+
+// Click Start C Button 
+
+02-06 20:39:52.189 D/dnagaraj(23490): 4 - ActivityB: OnPause() // Start C button is clicked and onPause() is called which cause  Activity B to go to pause.The Activity B is partially obscured by another activity C. Activity B State: Paused
+
+02-06 20:39:52.212 D/dnagaraj(23490): 1 - ActivityC: OnCreate() //Onclick of Start C Button cause Activity B to pause and onCreate() is called which creates Activity C. Activity C State: Created.
+
+02-06 20:39:52.213 D/dnagaraj(23490): 2 - ActivityC: OnStart() //As soon as Activity C is created, it calls onStart() and goes to started state. Activity C State: Started.
+
+02-06 20:39:52.214 D/dnagaraj(23490): 3 - ActivityC: OnResume() //onStart() is quickly followed by onResume()  and Activity C goes to Resumed state.In this state,the user can interact with it. Activity C State: Resumed.
+
+02-06 20:39:52.659 D/dnagaraj(23490): 5 - ActivityB: OnStop() // onStop() is called. Activity C is in the foreground ,Activity B is stopped. Activity B is completely hidden and not visible to the user.The activity instance and all its state information such as member variable is retained, but code cannot be executed. Activity B State: Stopped.
+
+//Click Dialog Button 
+
+02-06 20:39:54.009 D/dnagaraj(23490): 4 - ActivityC: OnPause() //Dialog button is clicked , onPause() is called which cause  Activity C to go to pause.The Activity C is partially obscured by another activity Dialog. Activity C State: Paused.
+
+02-06 20:39:55.765 D/dnagaraj(23490): 5 - ActivityC: OnResume() // The OK button in dialog box is clicked, onResume() is called which makes Activity C to go to Resumed state again. User can interact. Activity C State: Resumed.
+
+//Click Stack soft Button 
+
+02-06 20:39:57.677 D/dnagaraj(23490): 6 - ActivityC: OnPause() // The Stack soft button is clicked which cause Activity C to go to paused state by calling onPause().The Activity C is partially obscured by another activity. Activity C State: Paused.
+
+02-06 20:39:57.690 D/dnagaraj(23490): 7 - ActivityC: OnStop() // onStop() is called as soon as stack button is pressed.Since the stack button is pressed, Activity C is completely hidden and user cannot interact with it.The activity instance and all its state information such as member variable is retained, but code cannot be executed. Activity C State: Stopped.
+
+//Click Back soft Button
+
+02-06 20:39:59.512 D/dnagaraj(23490): 8 - ActivityC: OnRestart() //Back soft button is pressed which calls onRestart() to restart the hidden or stopped Activity C. 
+
+02-06 20:39:59.513 D/dnagaraj(23490): 9 - ActivityC: OnStart() //onRestart() is quickly followed by onStart() and Activity C is started. Activity C State: Started.
+
+02-06 20:39:59.513 D/dnagaraj(23490): 10 - ActivityC: OnResume() //onStart() is quickly followed by onResume()  and Activity C goes to Resumed state.In this state,the user can interact with it. Activity C State: Resumed.
+
+// Click Start A Button 
+
+02-06 20:40:01.466 D/dnagaraj(23490): 6 - ActivityB: OnDestroy() // Start A button is clicked.onDestroy() of ActivityB is called and it is destroyed. Activity B instance is completely removed from the system memory. The onDestroy method is called after it has already called onPause and onStop method. In long-running resources it could potentially leak memory if it is not closed properly,so the activity should be killed. Activity B State: Destroyed.
+
+02-06 20:40:01.473 D/dnagaraj(23490): 11 - ActivityC: OnPause() // onPause() of Activity C is called and Activity C to go to pause.The Activity C is partially obscured by another activity A. Activity C State: Paused.
+
+02-06 20:40:01.496 D/dnagaraj(23490): 6 - ActivityA: OnRestart() //Onclick of Start A button calls onRestart() method to restart the hidden or stopped Activity A.
+
+02-06 20:40:01.496 D/dnagaraj(23490): 7 - ActivityA: OnStart() // onRestart() is quickly followed by onStart() and Activity A is started. Activity A State: Started.
+
+02-06 20:40:01.496 D/dnagaraj(23490): 8 - ActivityA: OnResume() // Once onStart() is finished,onResume() is called.In this state, the activity is in the foreground and the user can interact with it.Activity A State: Resumed.
+
+02-06 20:40:01.832 D/dnagaraj(23490): 12 - ActivityC: OnStop() // onStop() of Activity C is called.Activity A is in the foreground ,Activity C is stopped. Activity C is completely hidden and not visible to the user.The activity instance and all its state information such as member variable is retained, but code cannot be executed. Activity C State: Stopped.
+
+02-06 20:40:01.832 D/dnagaraj(23490): 13 - ActivityC: OnDestroy() // onDestroy() of Activity C is called and it is destroyed. Activity C instance is completely removed from the system memory. The onDestroy method is called after it has already called onPause and onStop method. In long-running resources it could potentially leak memory if it is not closed properly,so the activity should be killed.Activity C State: Destroyed.
+
+// Click Home Button
+
+02-06 20:40:03.394 D/dnagaraj(23490): 9 - ActivityA: OnPause() //Home button is clicked  onPause() is called which cause  Activity A to go to pause.The Activity A is partially obscured by another activity. Activity A state: Paused.
+
+02-06 20:40:03.805 D/dnagaraj(23490): 10 - ActivityA: OnStop() // onStop method is called and Activity A is stopped.  Home screen is visible. Activity A is completely hidden and not visible to the user.The activity instance and all its state information such as member variable is retained, but code cannot be executed. Activity A state: Stopped.
+
+// Lauch the Application second time
+
+02-06 20:40:07.124 D/dnagaraj(23490): 11 - ActivityA: OnRestart() //  The application is launched again from the menu. Activity A is declared as Main Activity. OnRestart method is called and Activity A is restarted.
+
+02-06 20:40:07.129 D/dnagaraj(23490): 12 - ActivityA: OnStart() // OnRestart is quickly followed by onStart method and Activity A is started. 
+
+02-06 20:40:07.129 D/dnagaraj(23490): 13 - ActivityA: OnResume() //Once onStart is finished,onResume is called.In this state, the activity is in the foreground and the user can interact with it.Activity A state: Resumed.
+
+//Click Start B Button
+
+02-06 20:40:09.300 D/dnagaraj(23490): 14 - ActivityA: OnPause() // Start B button is clicked which cause  Activity A to go to pause.The Activity A is partially obscured by another activity B
+
+02-06 20:40:09.330 D/dnagaraj(23490): 7 - ActivityB: OnCreate() // Onclick of Start B Button cause Activity A to pause and  the creates Activity B.
+
+02-06 20:40:09.332 D/dnagaraj(23490): 8 - ActivityB: OnStart() // As soon as Activity B is created, it calls onStart and goes to started state.
+
+02-06 20:40:09.333 D/dnagaraj(23490): 9 - ActivityB: OnResume() // OnStart is quickly followed by OnResume method and Activity B goes to Resumed state.In this state,the user can interact with it.
+
+02-06 20:40:09.798 D/dnagaraj(23490): 15 - ActivityA: OnStop() // OnStop method is called.Activity B is in the foreground ,Activity A is stopped. Activity A is completely hidden and not visible to the user.The activity instance and all its state information such as member variable is retained, but code cannot be executed. 
+ 
+// Click Back soft Button
+
+02-06 20:40:10.959 D/dnagaraj(23490): 10 - ActivityB: OnPause() //Back soft button is clicked which cause Activity B to go to paused state by calling onPause.The Activity B is partially obscured by another activity.
+
+02-06 20:40:10.965 D/dnagaraj(23490): 16 - ActivityA: OnRestart() // The onRestart method is called on back button press  to restart the hidden activity and Activity A is restarted.
+
+02-06 20:40:10.965 D/dnagaraj(23490): 17 - ActivityA: OnStart() // onRestart() is quickly followed by onStart method and Activity A is started. 
+
+02-06 20:40:10.965 D/dnagaraj(23490): 18 - ActivityA: OnResume() // Once onStart() is finished,onResume() is called.In this state, the activity is in the foreground and the user can interact with it.
+
+02-06 20:40:11.295 D/dnagaraj(23490): 11 - ActivityB: OnStop() // onStop method of Activity B is called. Activity A is in the foreground ,Activity  B is stopped. Activity B is completely hidden and not visible to the user.
+
+02-06 20:40:11.295 D/dnagaraj(23490): 12 - ActivityB: OnDestroy() // onDestroy method of Activity B is called and it is destroyed. Activity B instance is completely removed from the system memory. 
+
+// Click Back soft Button 
+
+02-06 20:40:12.060 D/dnagaraj(23490): 19 - ActivityA: OnPause() // Back soft button is clicked which cause Activity A to go to paused state by calling onPause. Activity A state: Paused.
+
+02-06 20:40:12.432 D/dnagaraj(23490): 20 - ActivityA: OnStop() // onStop method of Activity A is called. Activity A is stopped. Activity A state: Stopped.
+
+02-06 20:40:12.432 D/dnagaraj(23490): 21 - ActivityA: OnDestroy() //  onDestroy method of Activity A is called and it is destroyed.  Activity A state: Destroyed.
+
+
+Different minimum user operations to trigger onRestart() for Activity A:
+
+1.Start Application and press Stack soft key and press Back soft key
+2.Start Application and press Home key and open Application again.
+3..Start Application and press Start B and press Back soft key
+4.Start Application and press Start C and press Back soft key
+5.Start Application and press Start B and press Finish B
+6.Start Application and press Start C and press Finish C
+7.Start Application and press Start B and press Start A
+8.Start Application and press Start C and press Start A
+
+
+
+
+
+		
+
+		
+
+
+		
+
